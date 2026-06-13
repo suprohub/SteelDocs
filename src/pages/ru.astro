@@ -1,0 +1,81 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@/components/sections/Navbar.astro";
+import Hero from "@/components/sections/Hero.astro";
+import ChooseDocs from "@/components/sections/ChooseDocs.astro";
+import Community from "@/components/sections/Community.astro";
+import FooterStatus from "@/components/sections/FooterStatus.astro";
+---
+
+<Layout title="SteelDocs">
+  <Navbar
+    logoText="Steel"
+    logoHighlight="MC"
+    searchPlaceholder="Поиск документации..."
+    noResultsText="Ничего не найдено"
+    devWarningText="Поиск доступен только в продакшен-сборках"
+    langLabel="RU"
+    langChangeLabel="Сменить язык"
+    languages={[
+      { href: "/SteelDocs/", flag: "🇬🇧", label: "English" },
+      { href: "/SteelDocs/de/", flag: "🇩🇪", label: "Deutsch" },
+      { href: "/SteelDocs/es/", flag: "🇪🇸", label: "Español" },
+      { href: "/SteelDocs/ru/", flag: "🇷🇺", label: "Русский" },
+    ]}
+    themeToggleLabel="Переключить тему"
+    discordLabel="Присоединяйтесь к нашему Discord сообществу"
+    discordHref="https://discord.gg/MwChEHnAbh"
+    githubLabel="Репозиторий GitHub"
+    githubHref="https://github.com/Steel-Foundation/SteelMC"
+  />
+  <Hero
+    pillText="Всё ещё готовим"
+    heroTitle="Steel"
+    heroTitleHighlight="MC"
+    subtitle="Майнкрафт, реализованный правильно. Написан на Rust с расчётом на многопоточность. Мы стремимся к совместимости с ваниллой, производительности и кастомизации."
+    mainCtaText="Присоединяйтесь!"
+    secondCtaText="Документация"
+  />
+  <main
+    class="container mx-4 w-auto lg:mx-auto max-w-280 px-4 mt-16 lg:-mt-12 text-white relative z-10"
+  >
+    <ChooseDocs
+      sectionLabel="ВЫБЕРИТЕ ДОКУМЕНТАЦИЮ !"
+      sectionTitle="Привет, что вы хотите сделать?"
+      sectionDescription="Steel тщательно спроектирован для всех. Разработчики, администраторы? Неважно, что вы хотите делать, для вас есть документация!"
+      adminHref="/SteelDocs/guides/getting-started/for-users/"
+      adminImage="/SteelDocs/admin.png"
+      adminImageAlt="Документация для администраторов"
+      adminLabel="Администратор"
+      devHref="/SteelDocs/guides/getting-started/for-devs/"
+      devImage="/SteelDocs/contributor.png"
+      devImageAlt="Документация для разработчиков"
+      devLabel="Разработчик"
+    />
+    <Community
+      heading="Заинтересованы?"
+      headingHighlight="Присоединяйтесь к нам!"
+      descriptionBold1="Steel - это место, где собираются люди"
+      descriptionMiddle=", чтобы программировать, общаться и веселиться. От талантливых разработчиков до самых болтливых, "
+      descriptionBold2="всех приветствуем!"
+      descriptionAfter=" Мы просто группа людей, пытающихся сделать крутой майнкрафт сервер."
+      discordHref="https://discord.com/invite/MwChEHnAbh"
+      githubHref="https://github.com/Steel-Foundation/SteelMC"
+    />
+    <FooterStatus
+      prefix="Steel -"
+      rotatingTexts={[
+        "в разработке",
+        "пока-что не готов",
+        "та пох, погнали уже",
+        "это сплав кста 🤓☝️",
+        "сделано с любовью",
+        "чертовски быстрый",
+        "растовский",
+        "готовим!",
+        "пьяные чуваки хайпят 4lve",
+        "благодарим контрибьюторов",
+      ]}
+    />
+  </main>
+</Layout>
