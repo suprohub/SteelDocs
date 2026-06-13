@@ -416,8 +416,10 @@
       ]
     },
     "BedBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Add two-block placement, bed block entities, sleep interaction, and"
+      ],
       "entries": [
         "white_bed",
         "orange_bed",
@@ -1397,8 +1399,10 @@
       ]
     },
     "LavaCauldronBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Add shared cauldron interaction, drip-fill, and comparator behavior with the cauldron family."
+      ],
       "entries": [
         "lava_cauldron"
       ]
@@ -1672,7 +1676,7 @@
       ]
     },
     "SlimeBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "slime_block"
@@ -1693,7 +1697,7 @@
       ]
     },
     "HayBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "hay_block"
@@ -1852,7 +1856,7 @@
       ]
     },
     "MagmaBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "magma_block"
@@ -2111,8 +2115,10 @@
       ]
     },
     "ScaffoldingBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Add vanilla placement, stability distance updates, falling conversion, and waterlogging."
+      ],
       "entries": [
         "scaffolding"
       ]
@@ -2214,8 +2220,10 @@
       ]
     },
     "CampfireBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Add campfire cooking, waterlogging updates, smoke particles, and dowse item ejection."
+      ],
       "entries": [
         "campfire",
         "soul_campfire"
@@ -2223,9 +2231,7 @@
     },
     "SweetBerryBushBlock": {
       "implemented": true,
-      "todos": [
-        "make stuck in block"
-      ],
+      "todos": [],
       "entries": [
         "sweet_berry_bush"
       ]
@@ -2354,8 +2360,10 @@
       ]
     },
     "HoneyBlock": {
-      "implemented": false,
-      "todos": [],
+      "implemented": true,
+      "todos": [
+        "Award the honey-block slide advancement once advancements exist."
+      ],
       "entries": [
         "honey_block"
       ]
@@ -2455,7 +2463,7 @@
       ]
     },
     "PowderSnowBlock": {
-      "implemented": false,
+      "implemented": true,
       "todos": [],
       "entries": [
         "powder_snow"
