@@ -3,7 +3,7 @@ title: Установка
 description: Как установить Steel на вашу систему.
 ---
 
-import { VERSION } from '../../../../../content.config.ts';
+import { mcVersion } from '@/lib/versions';
 
 Это руководство описывает, как собрать и запустить Steel.
 
@@ -88,7 +88,7 @@ cargo run --release
 
 1. Создаст файл `config/steel_config.json5`, если он не существует
 2. Привяжется к `0.0.0.0:25565` по умолчанию
-3. Начнёт принимать клиенты Minecraft версии {VERSION}
+3. Начнёт принимать клиенты Minecraft версии {await mcVersion()}
 
 ## Готовые бинарные сборки
 

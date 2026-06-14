@@ -3,7 +3,7 @@ title: Запуск сервера
 description: Как запускать и управлять сервером Steel.
 ---
 
-import { VERSION } from '../../../../../content.config.ts';
+import { mcVersion } from '@/lib/versions';
 
 Это руководство описывает запуск Steel и его поведение.
 
@@ -26,7 +26,7 @@ cargo run --release
 
 ## Подключение
 
-Используйте Minecraft Java Edition **{VERSION}** для подключения:
+Используйте Minecraft Java Edition **{await mcVersion()}** для подключения:
 
 1. Откройте Minecraft и перейдите в Сетевую игру
 2. Добавьте сервер с адресом `localhost` (или IP вашего сервера)
@@ -81,7 +81,7 @@ Steel поддерживает различные режимы тикрейта 
 
 Убедитесь, что:
 
-- Клиент работает с Minecraft {VERSION}
+- Клиент работает с Minecraft {await mcVersion()}
 - `online_mode` соответствует вашей настройке (установите `false` для оффлайн/пиратских клиентов)
 - Брандмауэр разрешает подключения на настроенном порту
 
