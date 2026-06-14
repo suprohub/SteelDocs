@@ -5,139 +5,138 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://steel-foundation.github.io/SteelDocs/",
-  base: "/SteelDocs/",
+  site: "https://steelmc.dev/",
+  base: "/",
   output: "static",
 
-  integrations: [starlight({
-    customCss: ["./src/styles/global.css"],
-    favicon: "/favicon.png",
-    title: {
-      en: "Steel-Docs",
-      de: "Steel-Doku",
-      es: "Documentacion de Steel",
-      ru: "Steel-Документация",
-    },
-    social: [
-      {
-        icon: "discord",
-        label: "Discord",
-        href: "https://discord.gg/MwChEHnAbh",
+  integrations: [
+    starlight({
+      customCss: ["./src/styles/global.css"],
+      favicon: "/favicon.png",
+      title: {
+        en: "Steel-Docs",
+        de: "Steel-Doku",
+        es: "Documentacion de Steel",
+        ru: "Steel-Документация",
       },
-      {
-        icon: "github",
-        label: "GitHub",
-        href: "https://github.com/Steel-Foundation/SteelMC",
-      },
-    ],
-    sidebar: [
-      {
-        label: "Getting started",
-        translations: {
-          es: "Primeros pasos",
-          de: "Erste Schritte",
-          ru: "Начало работы",
+      social: [
+        {
+          icon: "discord",
+          label: "Discord",
+          href: "https://discord.gg/MwChEHnAbh",
         },
-        autogenerate: { directory: "guides/getting-started" },
-      },
-      {
-        label: "Configuration",
-        translations: {
-          es: "Configuración",
-          de: "Konfiguration",
-          ru: "Конфигурация",
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/Steel-Foundation/SteelMC",
         },
-        autogenerate: { directory: "guides/configuration" },
-      },
-      {
-        label: "Development",
-        translations: {
-          es: "Desarrollo",
-          de: "Entwicklung",
-          ru: "Разработка",
+      ],
+      sidebar: [
+        {
+          label: "Getting started",
+          translations: {
+            es: "Primeros pasos",
+            de: "Erste Schritte",
+            ru: "Начало работы",
+          },
+          autogenerate: { directory: "guides/getting-started" },
         },
-        items: [
-          "guides/development/decompile-minecraft",
-          "guides/development/upgrade-minecraft",
-          "guides/development/code-standard",
-          "guides/development/block_item_registration",
-          "guides/development/registries",
-          {
-            label: "Blocks",
-            translations: {
-              es: "Bloques",
-              de: "Blöcke",
-              ru: "Блоки",
-            },
-            autogenerate: { directory: "guides/development/blocks" },
+        {
+          label: "Configuration",
+          translations: {
+            es: "Configuración",
+            de: "Konfiguration",
+            ru: "Конфигурация",
           },
-          {
-            label: "Items",
-            translations: {
-              es: "Objetos",
-              de: "Items",
-              ru: "Предметы",
-            },
-            autogenerate: { directory: "guides/development/items" },
-          },
-          {
-            label: "Network",
-            translations: {
-              es: "Red",
-              de: "Netzwerk",
-              ru: "Сеть",
-            },
-            autogenerate: { directory: "guides/development/network" },
-          },
-          {
-            label: "Tools",
-            translations: {
-              es: "Herramientas",
-              de: "Werkzeuge",
-              ru: "Инструменты",
-            },
-            autogenerate: { directory: "guides/development/tools" },
-          },
-        ],
-      },
-      {
-        label: "Reference",
-        translations: {
-          es: "Referencias",
-          de: "Referenz",
-          ru: "Справочник",
+          autogenerate: { directory: "guides/configuration" },
         },
-        autogenerate: { directory: "reference" },
+        {
+          label: "Development",
+          translations: {
+            es: "Desarrollo",
+            de: "Entwicklung",
+            ru: "Разработка",
+          },
+          items: [
+            "guides/development/decompile-minecraft",
+            "guides/development/upgrade-minecraft",
+            "guides/development/code-standard",
+            "guides/development/block_item_registration",
+            "guides/development/registries",
+            {
+              label: "Blocks",
+              translations: {
+                es: "Bloques",
+                de: "Blöcke",
+                ru: "Блоки",
+              },
+              autogenerate: { directory: "guides/development/blocks" },
+            },
+            {
+              label: "Items",
+              translations: {
+                es: "Objetos",
+                de: "Items",
+                ru: "Предметы",
+              },
+              autogenerate: { directory: "guides/development/items" },
+            },
+            {
+              label: "Network",
+              translations: {
+                es: "Red",
+                de: "Netzwerk",
+                ru: "Сеть",
+              },
+              autogenerate: { directory: "guides/development/network" },
+            },
+            {
+              label: "Tools",
+              translations: {
+                es: "Herramientas",
+                de: "Werkzeuge",
+                ru: "Инструменты",
+              },
+              autogenerate: { directory: "guides/development/tools" },
+            },
+          ],
+        },
+        {
+          label: "Reference",
+          translations: {
+            es: "Referencias",
+            de: "Referenz",
+            ru: "Справочник",
+          },
+          autogenerate: { directory: "reference" },
+        },
+      ],
+      editLink: {
+        baseUrl: "https://github.com/Steel-Foundation/SteelDocs/edit/main/",
       },
-    ],
-    editLink: {
-      baseUrl: "https://github.com/Steel-Foundation/SteelDocs/edit/main/",
-    },
-    lastUpdated: true,
-    defaultLocale: "root",
-    locales: {
-      // English docs in `src/content/docs/`
-      root: {
-        label: "English",
-        lang: "en",
+      lastUpdated: true,
+      defaultLocale: "root",
+      locales: {
+        root: {
+          label: "English",
+          lang: "en",
+        },
+        de: {
+          label: "Deutsch",
+          lang: "de",
+        },
+        es: {
+          label: "Español",
+          lang: "es",
+        },
+        ru: {
+          label: "Русский",
+          lang: "ru",
+        },
       },
-      // Sprich Deutsch, du Hurensohn :O) `src/content/docs/de/`
-      de: {
-        label: "Deutsch",
-        lang: "de",
-      },
-      // Documentacion en Español en `src/content/docs/es`
-      es: {
-        label: "Español",
-        lang: "es",
-      },
-      // Русская документация в `src/content/docs/ru`
-      ru: {
-        label: "Русский",
-        lang: "ru",
-      },
-    },
-  }), react()],
+    }),
+    react(),
+  ],
 
   vite: {
     plugins: [tailwindcss()],
