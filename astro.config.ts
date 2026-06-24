@@ -112,7 +112,7 @@ export default defineConfig({
         },
       ],
       editLink: {
-        baseUrl: "https://github.com/Steel-Foundation/SteelDocs/edit/main/",
+        baseUrl: "https://github.com/Steel-Foundationedit/main/",
       },
       lastUpdated: true,
       defaultLocale: "root",
